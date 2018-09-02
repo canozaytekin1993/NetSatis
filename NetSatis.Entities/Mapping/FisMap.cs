@@ -8,35 +8,35 @@ namespace NetSatis.Entities.Mapping
     {
         public FisMap()
         {
-            this.HasKey(p => p.Id);
-            this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.FisKodu).HasMaxLength(12);
-            this.Property(p => p.FisTuru).HasMaxLength(30);
-            this.Property(p => p.CariKodu).HasMaxLength(12);
-            this.Property(p => p.CariAdi).HasMaxLength(30);
-            this.Property(p => p.CariTuru).HasMaxLength(30);
-            this.Property(p => p.BelgeNo).HasMaxLength(20);
-            this.Property(p => p.PlasiyerKodu).HasMaxLength(12);
-            this.Property(p => p.PlasiyerAdi).HasMaxLength(30);
-            this.Property(p => p.IskontoOrani).HasPrecision(5,2);
-            this.Property(p => p.IskontoTutar).HasPrecision(5,2);
-            this.Property(p => p.ToplamTutar).HasPrecision(5,2);
-            this.Property(p => p.Aciklama).HasMaxLength(200);
+            HasKey(p => p.Id);
+            Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(p => p.FisKodu).HasMaxLength(12);
+            Property(p => p.FisTuru).HasMaxLength(30);
+            Property(p => p.CariKodu).HasMaxLength(12);
+            Property(p => p.CariAdi).HasMaxLength(30);
+            Property(p => p.CariTuru).HasMaxLength(30);
+            Property(p => p.BelgeNo).HasMaxLength(20);
+            Property(p => p.PlasiyerKodu).HasMaxLength(12);
+            Property(p => p.PlasiyerAdi).HasMaxLength(30);
+            Property(p => p.IskontoOrani).HasPrecision(5, 2);
+            Property(p => p.IskontoTutar).HasPrecision(5, 2);
+            Property(p => p.ToplamTutar).HasPrecision(5, 2);
+            Property(p => p.Aciklama).HasMaxLength(200);
 
-            this.ToTable("Fisler");
-            this.Property(p => p.Id).HasColumnName("Id");
-            this.Property(p => p.FisKodu).HasColumnName("FisKodu");
-            this.Property(p => p.FisTuru).HasColumnName("FisTuru");
-            this.Property(p => p.CariKodu).HasColumnName("CariKodu");
-            this.Property(p => p.CariAdi).HasColumnName("CariAdi");
-            this.Property(p => p.CariTuru).HasColumnName("CariTuru");
-            this.Property(p => p.PlasiyerKodu).HasColumnName("PlasiyerKodu");
-            this.Property(p => p.PlasiyerAdi).HasColumnName("PlasiyerAdi");
-            this.Property(p => p.BelgeNo).HasColumnName("BelgeNo");
-            this.Property(p => p.IskontoOrani).HasColumnName("IskontoOrani");
-            this.Property(p => p.IskontoTutar).HasColumnName("IskontoTutar");
-            this.Property(p => p.ToplamTutar).HasColumnName("ToplamTutar");
-            this.Property(p => p.Aciklama).HasColumnName("Aciklama");
+            ToTable("Fisler");
+            Property(p => p.Id).HasColumnName("Id");
+            Property(p => p.FisKodu).HasColumnName("FisKodu");
+            Property(p => p.FisTuru).HasColumnName("FisTuru");
+            Property(p => p.CariKodu).HasColumnName("CariKodu");
+            Property(p => p.CariAdi).HasColumnName("CariAdi");
+            Property(p => p.CariTuru).HasColumnName("CariTuru");
+            Property(p => p.PlasiyerKodu).HasColumnName("PlasiyerKodu");
+            Property(p => p.PlasiyerAdi).HasColumnName("PlasiyerAdi");
+            Property(p => p.BelgeNo).HasColumnName("BelgeNo");
+            Property(p => p.IskontoOrani).HasColumnName("IskontoOrani");
+            Property(p => p.IskontoTutar).HasColumnName("IskontoTutar");
+            Property(p => p.ToplamTutar).HasColumnName("ToplamTutar");
+            Property(p => p.Aciklama).HasColumnName("Aciklama");
         }
     }
 }

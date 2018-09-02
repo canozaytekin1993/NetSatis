@@ -8,21 +8,21 @@ namespace NetSatis.Entities.Mapping
     {
         public KasaMap()
         {
-            this.HasKey(p => p.Id);
-            this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.KasaKodu).HasMaxLength(12);
-            this.Property(p => p.KasaAdi).HasMaxLength(30);
-            this.Property(p => p.YetkiliKodu).HasMaxLength(12);
-            this.Property(p => p.YetkiliAdi).HasMaxLength(50);
-            this.Property(p => p.Aciklama).HasMaxLength(200);
+            HasKey(p => p.Id);
+            Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(p => p.KasaKodu).HasMaxLength(12);
+            Property(p => p.KasaAdi).HasMaxLength(30);
+            Property(p => p.YetkiliKodu).HasMaxLength(12);
+            Property(p => p.YetkiliAdi).HasMaxLength(50);
+            Property(p => p.Aciklama).HasMaxLength(200);
 
-            this.ToTable("Kasalar");
-            this.Property(p => p.Id).HasColumnName("Id");
-            this.Property(p => p.KasaKodu).HasColumnName("KasaKodu");
-            this.Property(p => p.KasaAdi).HasColumnName("KasaAdi");
-            this.Property(p => p.YetkiliKodu).HasColumnName("YetkiliKodu");
-            this.Property(p => p.YetkiliAdi).HasColumnName("YetkiliAdi");
-            this.Property(p => p.Aciklama).HasColumnName("Aciklama");
+            ToTable("Kasalar");
+            Property(p => p.Id).HasColumnName("Id");
+            Property(p => p.KasaKodu).HasColumnName("KasaKodu");
+            Property(p => p.KasaAdi).HasColumnName("KasaAdi");
+            Property(p => p.YetkiliKodu).HasColumnName("YetkiliKodu");
+            Property(p => p.YetkiliAdi).HasColumnName("YetkiliAdi");
+            Property(p => p.Aciklama).HasColumnName("Aciklama");
         }
     }
 }

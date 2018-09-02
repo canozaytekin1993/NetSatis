@@ -8,43 +8,43 @@ namespace NetSatis.Entities.Mapping
     {
         public StokHareketMap()
         {
-            this.HasKey(p => p.Id);
-            this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.FisKodu).HasMaxLength(12);
-            this.Property(p => p.StokKodu).HasMaxLength(12);
-            this.Property(p => p.Hareket).HasMaxLength(10);
-            this.Property(p => p.StokAdi).HasMaxLength(50);
-            this.Property(p => p.Barkod).HasMaxLength(20);
-            this.Property(p => p.BarkodTuru).HasMaxLength(15);
-            this.Property(p => p.Birimi).HasMaxLength(15);
-            this.Property(p => p.Miktar).HasPrecision(12,3);
-            this.Property(p => p.BirimFiyati).HasPrecision(12,2);
-            this.Property(p => p.IndirimOrani).HasPrecision(5,2);
-            this.Property(p => p.IndirimTutari).HasPrecision(12,2);
-            this.Property(p => p.ToplamTutar).HasPrecision(12,2);
-            this.Property(p => p.DepoKodu).HasMaxLength(12);
-            this.Property(p => p.DepoAdi).HasMaxLength(30);
-            this.Property(p => p.SeriNo).HasMaxLength(200);
-            this.Property(p => p.Aciklama).HasMaxLength(200);
+            HasKey(p => p.Id);
+            Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(p => p.FisKodu).HasMaxLength(12);
+            Property(p => p.StokKodu).HasMaxLength(12);
+            Property(p => p.Hareket).HasMaxLength(10);
+            Property(p => p.StokAdi).HasMaxLength(50);
+            Property(p => p.Barkod).HasMaxLength(20);
+            Property(p => p.BarkodTuru).HasMaxLength(15);
+            Property(p => p.Birimi).HasMaxLength(15);
+            Property(p => p.Miktar).HasPrecision(12, 3);
+            Property(p => p.BirimFiyati).HasPrecision(12, 2);
+            Property(p => p.IndirimOrani).HasPrecision(5, 2);
+            Property(p => p.IndirimTutari).HasPrecision(12, 2);
+            Property(p => p.ToplamTutar).HasPrecision(12, 2);
+            Property(p => p.DepoKodu).HasMaxLength(12);
+            Property(p => p.DepoAdi).HasMaxLength(30);
+            Property(p => p.SeriNo).HasMaxLength(200);
+            Property(p => p.Aciklama).HasMaxLength(200);
 
-            this.ToTable("StokHareketleri");
-            this.Property(p => p.Id).HasColumnName("Id");
-            this.Property(p => p.FisKodu).HasColumnName("FisKodu");
-            this.Property(p => p.StokKodu).HasColumnName("StokKodu");
-            this.Property(p => p.Hareket).HasColumnName("Hareket");
-            this.Property(p => p.StokAdi).HasColumnName("StokAdi");
-            this.Property(p => p.Barkod).HasColumnName("Barkod");
-            this.Property(p => p.BarkodTuru).HasColumnName("BarkodTuru");
-            this.Property(p => p.Birimi).HasColumnName("Birimi");
-            this.Property(p => p.Miktar).HasColumnName("Miktar");
-            this.Property(p => p.BirimFiyati).HasColumnName("BirimFiyati");
-            this.Property(p => p.IndirimOrani).HasColumnName("IndirimOrani");
-            this.Property(p => p.IndirimTutari).HasColumnName("IndirimTutari");
-            this.Property(p => p.ToplamTutar).HasColumnName("ToplamTutar");
-            this.Property(p => p.DepoKodu).HasColumnName("DepoKodu");
-            this.Property(p => p.DepoAdi).HasColumnName("DepoAdi");
-            this.Property(p => p.SeriNo).HasColumnName("SeriNo");
-            this.Property(p => p.Aciklama).HasColumnName("Aciklama");
+            ToTable("StokHareketleri");
+            Property(p => p.Id).HasColumnName("Id");
+            Property(p => p.FisKodu).HasColumnName("FisKodu");
+            Property(p => p.StokKodu).HasColumnName("StokKodu");
+            Property(p => p.Hareket).HasColumnName("Hareket");
+            Property(p => p.StokAdi).HasColumnName("StokAdi");
+            Property(p => p.Barkod).HasColumnName("Barkod");
+            Property(p => p.BarkodTuru).HasColumnName("BarkodTuru");
+            Property(p => p.Birimi).HasColumnName("Birimi");
+            Property(p => p.Miktar).HasColumnName("Miktar");
+            Property(p => p.BirimFiyati).HasColumnName("BirimFiyati");
+            Property(p => p.IndirimOrani).HasColumnName("IndirimOrani");
+            Property(p => p.IndirimTutari).HasColumnName("IndirimTutari");
+            Property(p => p.ToplamTutar).HasColumnName("ToplamTutar");
+            Property(p => p.DepoKodu).HasColumnName("DepoKodu");
+            Property(p => p.DepoAdi).HasColumnName("DepoAdi");
+            Property(p => p.SeriNo).HasColumnName("SeriNo");
+            Property(p => p.Aciklama).HasColumnName("Aciklama");
         }
     }
 }
