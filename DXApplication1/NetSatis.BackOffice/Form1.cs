@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars.Ribbon;
+using NetSatis.Entities.Context;
 
 namespace NetSatis.BackOffice
 {
@@ -7,6 +8,11 @@ namespace NetSatis.BackOffice
         public Form1()
         {
             InitializeComponent();
+            using (var context = new NetSatisContext())
+            {
+                // Veri tabanında database varsa, kurulmaz. Yoksa kurulur.
+                context.Database.CreateIfNotExists();
+            }
         }
     }
 }
