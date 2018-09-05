@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSatis.BackOffice", "DXAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSatis.FrontOffice", "DXApplication2\NetSatis.FrontOffice\NetSatis.FrontOffice.csproj", "{C9DEED7C-0CC7-440C-9F29-25CF84623E7E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43BCC990-1C21-4B6F-ABA2-EB34C8D79591}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dosyalar", "Dosyalar", "{43BCC990-1C21-4B6F-ABA2-EB34C8D79591}"
 	ProjectSection(SolutionItems) = preProject
 		Yapılacaklar Listesi.txt = Yapılacaklar Listesi.txt
 	EndProjectSection

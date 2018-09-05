@@ -1,6 +1,8 @@
-﻿namespace NetSatis.Entities.Tables
+﻿using NetSatis.Entities.Interface;
+
+namespace NetSatis.Entities.Tables
 {
-    public class Tanim
+    public class Tanim : IEntity
     {
         public int Id { get; set; }
         public string Turu { get; set; }

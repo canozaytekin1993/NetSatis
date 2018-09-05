@@ -1,6 +1,8 @@
-﻿namespace NetSatis.Entities.Tables
+﻿using NetSatis.Entities.Interface;
+
+namespace NetSatis.Entities.Tables
 {
-    public class Stok
+    public class Stok : IEntity
     {
         public int Id { get; set; }
         public bool Durumu { get; set; }

@@ -1,6 +1,8 @@
-﻿namespace NetSatis.Entities.Tables
+﻿using NetSatis.Entities.Interface;
+
+namespace NetSatis.Entities.Tables
 {
-    public class OdemeTuru
+    public class OdemeTuru : IEntity
     {
         public int Id { get; set; }
         public string OdemeTuruKodu { get; set; }

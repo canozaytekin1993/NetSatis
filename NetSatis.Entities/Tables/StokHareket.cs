@@ -1,8 +1,9 @@
 ﻿using System;
+using NetSatis.Entities.Interface;
 
 namespace NetSatis.Entities.Tables
 {
-    public class StokHareket
+    public class StokHareket : IEntity
     {
         public int Id { get; set; }
         public string FisKodu { get; set; }
