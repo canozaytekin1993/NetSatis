@@ -59,10 +59,10 @@ namespace NetSatis.BackOffice.Stok_Menü
                     Stoklar.MinStokMiktari,
                     Stoklar.MaxStokMiktari,
                     Stoklar.Aciklama,
-                    StokGiris = StokHareket.Where(c => c.Hareket == "Stok Giriş").Sum(c => c.ToplamTutar),
-                    StokCikis = StokHareket.Where(c => c.Hareket == "Stok Cikis").Sum(c => c.ToplamTutar),
-                    MevcutStok = StokHareket.Where(c => c.Hareket == "Stok Giriş").Sum(c => c.ToplamTutar) -
-                                 StokHareket.Where(c => c.Hareket == "Stok Cikis").Sum(c => c.ToplamTutar)
+                    StokGiris = StokHareket.Where(c => c.Hareket == "Stok Giriş").Sum(c => c.Miktar) ?? 0,
+                    StokCikis = StokHareket.Where(c => c.Hareket == "Stok Çıkış").Sum(c => c.Miktar) ?? 0,
+                    MevcutStok = StokHareket.Where(c => c.Hareket == "Stok Giriş").Sum(c => c.Miktar) -
+                                 StokHareket.Where(c => c.Hareket == "Stok Çıkış").Sum(c => c.Miktar) ?? 0
                 }).ToList();
             gridControl1.DataSource = tablo;
         }
