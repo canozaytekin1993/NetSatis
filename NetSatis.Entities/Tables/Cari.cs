@@ -28,8 +28,8 @@ namespace NetSatis.Entities.Tables
         public string OzelKod4 { get; set; }
         public string VergiDairesi { get; set; }
         public string VergiNo { get; set; }
-        public decimal IskontoOrani { get; set; }
-        public decimal RiskLimiti { get; set; }
+        public decimal? IskontoOrani { get; set; }
+        public decimal? RiskLimiti { get; set; }
         public string AlisOzelFiyati { get; set; }
         public string SatisOzelFiyati { get; set; }
         public string Aciklama { get; set; }

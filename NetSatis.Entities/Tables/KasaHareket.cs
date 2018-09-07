@@ -15,7 +15,7 @@ namespace NetSatis.Entities.Tables
         public string CariKodu { get; set; }
         public string CariAdi { get; set; }
         public DateTime Tarih { get; set; }
-        public decimal Tutar { get; set; }
+        public decimal? Tutar { get; set; }
         public string Aciklama { get; set; }
     }
 }

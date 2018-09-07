@@ -23,14 +23,14 @@ namespace NetSatis.Entities.Tables
         public string UreticiKodu { get; set; }
         public int AlisKdv { get; set; }
         public int SatisKdv { get; set; }
-        public decimal AlisFiyatı1 { get; set; }
-        public decimal AlisFiyatı2 { get; set; }
-        public decimal AlisFiyatı3 { get; set; }
-        public decimal SatisFiyatı1 { get; set; }
-        public decimal SatisFiyatı2 { get; set; }
-        public decimal SatisFiyatı3 { get; set; }
-        public decimal MinStokMiktari { get; set; }
-        public decimal MaxStokMiktari { get; set; }
+        public decimal? AlisFiyatı1 { get; set; }
+        public decimal? AlisFiyatı2 { get; set; }
+        public decimal? AlisFiyatı3 { get; set; }
+        public decimal? SatisFiyatı1 { get; set; }
+        public decimal? SatisFiyatı2 { get; set; }
+        public decimal? SatisFiyatı3 { get; set; }
+        public decimal? MinStokMiktari { get; set; }
+        public decimal? MaxStokMiktari { get; set; }
         public string Aciklama { get; set; }
     }
 }

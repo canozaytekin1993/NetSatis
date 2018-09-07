@@ -15,10 +15,10 @@ namespace NetSatis.Entities.Tables
         public string Birimi { get; set; }
         public decimal Miktar { get; set; }
         public int Kdv { get; set; }
-        public decimal BirimFiyati { get; set; }
-        public decimal IndirimOrani { get; set; }
-        public decimal IndirimTutari { get; set; }
-        public decimal ToplamTutar { get; set; }
+        public decimal? BirimFiyati { get; set; }
+        public decimal? IndirimOrani { get; set; }
+        public decimal? IndirimTutari { get; set; }
+        public decimal? ToplamTutar { get; set; }
         public string DepoKodu { get; set; }
         public string DepoAdi { get; set; }
         public string SeriNo { get; set; }
