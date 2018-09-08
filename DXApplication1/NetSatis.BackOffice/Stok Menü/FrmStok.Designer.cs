@@ -41,9 +41,9 @@
             this.btnDüzenle = new DevExpress.XtraEditors.SimpleButton();
             this.btnEkle = new DevExpress.XtraEditors.SimpleButton();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFiltrele = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFiltreIptal = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFiltreKapat = new DevExpress.XtraEditors.SimpleButton();
             this.filterControl1 = new DevExpress.XtraEditors.FilterControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -97,7 +97,7 @@
             this.lblBaslik.Appearance.Options.UseTextOptions = true;
             this.lblBaslik.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblBaslik.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBaslik.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblBaslik.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Name = "lblBaslik";
@@ -131,6 +131,7 @@
             this.btnKapat.Size = new System.Drawing.Size(86, 47);
             this.btnKapat.TabIndex = 8;
             this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // imgMenu
             // 
@@ -156,6 +157,7 @@
             this.btnAra.Size = new System.Drawing.Size(86, 47);
             this.btnAra.TabIndex = 7;
             this.btnAra.Text = "Ara";
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // btnGüncelle
             // 
@@ -166,6 +168,7 @@
             this.btnGüncelle.Size = new System.Drawing.Size(86, 47);
             this.btnGüncelle.TabIndex = 6;
             this.btnGüncelle.Text = "Güncelle";
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // btnKopyala
             // 
@@ -186,6 +189,7 @@
             this.btnSil.Size = new System.Drawing.Size(86, 47);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDüzenle
             // 
@@ -213,9 +217,9 @@
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 55);
             this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton3);
-            this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton2);
-            this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnFiltrele);
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnFiltreIptal);
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnFiltreKapat);
             this.splitContainerControl1.Panel1.Controls.Add(this.filterControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
@@ -225,38 +229,41 @@
             this.splitContainerControl1.TabIndex = 9;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
-            // simpleButton3
+            // btnFiltrele
             // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton3.ImageOptions.ImageIndex = 8;
-            this.simpleButton3.ImageOptions.ImageList = this.imgMenu;
-            this.simpleButton3.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(969, 91);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(58, 47);
-            this.simpleButton3.TabIndex = 10;
+            this.btnFiltrele.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFiltrele.ImageOptions.ImageIndex = 8;
+            this.btnFiltrele.ImageOptions.ImageList = this.imgMenu;
+            this.btnFiltrele.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnFiltrele.Location = new System.Drawing.Point(969, 91);
+            this.btnFiltrele.Name = "btnFiltrele";
+            this.btnFiltrele.Size = new System.Drawing.Size(58, 47);
+            this.btnFiltrele.TabIndex = 10;
+            this.btnFiltrele.Click += new System.EventHandler(this.btnFiltrele_Click);
             // 
-            // simpleButton2
+            // btnFiltreIptal
             // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.ImageOptions.ImageIndex = 9;
-            this.simpleButton2.ImageOptions.ImageList = this.imgMenu;
-            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(1033, 91);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(58, 47);
-            this.simpleButton2.TabIndex = 9;
+            this.btnFiltreIptal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFiltreIptal.ImageOptions.ImageIndex = 9;
+            this.btnFiltreIptal.ImageOptions.ImageList = this.imgMenu;
+            this.btnFiltreIptal.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnFiltreIptal.Location = new System.Drawing.Point(1033, 91);
+            this.btnFiltreIptal.Name = "btnFiltreIptal";
+            this.btnFiltreIptal.Size = new System.Drawing.Size(58, 47);
+            this.btnFiltreIptal.TabIndex = 9;
+            this.btnFiltreIptal.Click += new System.EventHandler(this.btnFiltreIptal_Click);
             // 
-            // simpleButton1
+            // btnFiltreKapat
             // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.ImageOptions.ImageIndex = 7;
-            this.simpleButton1.ImageOptions.ImageList = this.imgMenu;
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(1097, 91);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(58, 47);
-            this.simpleButton1.TabIndex = 8;
+            this.btnFiltreKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFiltreKapat.ImageOptions.ImageIndex = 7;
+            this.btnFiltreKapat.ImageOptions.ImageList = this.imgMenu;
+            this.btnFiltreKapat.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnFiltreKapat.Location = new System.Drawing.Point(1097, 91);
+            this.btnFiltreKapat.Name = "btnFiltreKapat";
+            this.btnFiltreKapat.Size = new System.Drawing.Size(58, 47);
+            this.btnFiltreKapat.TabIndex = 8;
+            this.btnFiltreKapat.Click += new System.EventHandler(this.btnFiltreKapat_Click);
             // 
             // filterControl1
             // 
@@ -265,6 +272,7 @@
             this.filterControl1.Location = new System.Drawing.Point(0, 0);
             this.filterControl1.Name = "filterControl1";
             this.filterControl1.Size = new System.Drawing.Size(1167, 148);
+            this.filterControl1.SourceControl = this.gridControl1;
             this.filterControl1.TabIndex = 1;
             this.filterControl1.Text = "filterControl1";
             // 
@@ -550,22 +558,25 @@
             this.gridColumn1.Caption = "Stok Giriş";
             this.gridColumn1.FieldName = "StokGiris";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 11;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Stok Çıkış";
-            this.gridColumn2.FieldName = "Stok Çıkış";
+            this.gridColumn2.FieldName = "StokCikis";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 12;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Mevcut Stok";
-            this.gridColumn3.FieldName = "Mevcut Stok";
+            this.gridColumn3.FieldName = "MevcutStok";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 13;
             // 
@@ -606,9 +617,9 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.FilterControl filterControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnFiltrele;
+        private DevExpress.XtraEditors.SimpleButton btnFiltreIptal;
+        private DevExpress.XtraEditors.SimpleButton btnFiltreKapat;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colDurumu;
         private DevExpress.XtraGrid.Columns.GridColumn colStokKodu;

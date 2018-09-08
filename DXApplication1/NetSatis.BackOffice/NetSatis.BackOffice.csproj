@@ -79,6 +79,12 @@
     <Compile Include="Stok Menü\FrmStok.Designer.cs">
       <DependentUpon>FrmStok.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stok Menü\FrmStokIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok Menü\FrmStokIslem.Designer.cs">
+      <DependentUpon>FrmStokIslem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Ana Menü\FrmAnaMenu.resx">
       <DependentUpon>FrmAnaMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="Stok Menü\FrmStok.resx">
       <DependentUpon>FrmStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok Menü\FrmStokIslem.resx">
+      <DependentUpon>FrmStokIslem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

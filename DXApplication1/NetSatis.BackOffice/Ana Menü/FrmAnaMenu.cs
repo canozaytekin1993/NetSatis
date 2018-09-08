@@ -1,4 +1,5 @@
 ﻿using System;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using NetSatis.BackOffice.Stok_Menü;
 using NetSatis.Entities.Context;
@@ -34,10 +35,11 @@ namespace NetSatis.BackOffice
             cariDal.Save(context);
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmStok form = new FrmStok();
-            form.MdiParent = this;form.Show();
+            var form = new FrmStok();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }
