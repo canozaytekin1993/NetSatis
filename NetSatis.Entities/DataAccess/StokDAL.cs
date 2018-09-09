@@ -1,8 +1,8 @@
-﻿using NetSatis.Entities.Context;
+﻿using System.Linq;
+using NetSatis.Entities.Context;
 using NetSatis.Entities.Repositories;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Validations;
-using System.Linq;
 
 namespace NetSatis.Entities.DataAccess
 {

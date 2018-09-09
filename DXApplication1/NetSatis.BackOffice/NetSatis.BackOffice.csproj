@@ -79,11 +79,23 @@
     <Compile Include="Stok Menü\FrmStok.Designer.cs">
       <DependentUpon>FrmStok.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stok Menü\FrmStokHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok Menü\FrmStokHareket.Designer.cs">
+      <DependentUpon>FrmStokHareket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stok Menü\FrmStokIslem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stok Menü\FrmStokIslem.Designer.cs">
       <DependentUpon>FrmStokIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok Menü\FrmStokSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok Menü\FrmStokSec.Designer.cs">
+      <DependentUpon>FrmStokSec.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Ana Menü\FrmAnaMenu.resx">
       <DependentUpon>FrmAnaMenu.cs</DependentUpon>
@@ -101,12 +113,19 @@
     <EmbeddedResource Include="Stok Menü\FrmStok.resx">
       <DependentUpon>FrmStok.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stok Menü\FrmStokHareket.resx">
+      <DependentUpon>FrmStokHareket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stok Menü\FrmStokIslem.resx">
       <DependentUpon>FrmStokIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok Menü\FrmStokSec.resx">
+      <DependentUpon>FrmStokSec.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\NetSatis.Entities.Tables.Stok.datasource" />
+    <None Include="Properties\DataSources\NetSatis.Entities.Tables.StokHareket.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
