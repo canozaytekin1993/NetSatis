@@ -47,8 +47,8 @@
             this.btnFiltreKapat = new DevExpress.XtraEditors.SimpleButton();
             this.filterControl1 = new DevExpress.XtraEditors.FilterControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.cariBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDurumu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCariTuru = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -86,8 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cariBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -195,6 +195,7 @@
             this.btnKopyala.Size = new System.Drawing.Size(86, 47);
             this.btnKopyala.TabIndex = 5;
             this.btnKopyala.Text = "Kopyala";
+            this.btnKopyala.Click += new System.EventHandler(this.btnKopyala_Click);
             // 
             // btnSil
             // 
@@ -216,6 +217,7 @@
             this.btnDüzenle.Size = new System.Drawing.Size(86, 47);
             this.btnDüzenle.TabIndex = 3;
             this.btnDüzenle.Text = "Düzenle";
+            this.btnDüzenle.Click += new System.EventHandler(this.btnDüzenle_Click);
             // 
             // btnEkle
             // 
@@ -226,6 +228,7 @@
             this.btnEkle.Size = new System.Drawing.Size(86, 47);
             this.btnEkle.TabIndex = 2;
             this.btnEkle.Text = "Ekle";
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // splitContainerControl1
             // 
@@ -305,6 +308,10 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // cariBindingSource
+            // 
+            this.cariBindingSource.DataSource = typeof(NetSatis.Entities.Tables.Cari);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -342,10 +349,6 @@
             this.colBakiye});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // cariBindingSource
-            // 
-            this.cariBindingSource.DataSource = typeof(NetSatis.Entities.Tables.Cari);
             // 
             // colId
             // 
@@ -624,8 +627,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cariBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

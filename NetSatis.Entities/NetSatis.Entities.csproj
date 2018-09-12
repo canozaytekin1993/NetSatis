@@ -91,6 +91,7 @@
     <Compile Include="Tables\Cari.cs" />
     <Compile Include="Tables\Depo.cs" />
     <Compile Include="Tables\Fis.cs" />
+    <Compile Include="Tables\GenelToplam.cs" />
     <Compile Include="Tables\Kasa.cs" />
     <Compile Include="Tables\KasaHareket.cs" />
     <Compile Include="Tables\OdemeTuru.cs" />

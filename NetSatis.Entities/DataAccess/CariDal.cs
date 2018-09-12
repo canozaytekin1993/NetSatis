@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Repositories;
 using NetSatis.Entities.Tables;
@@ -75,7 +76,8 @@ namespace NetSatis.Entities.DataAccess
                 cariler.AlisOzelFiyati,
                 cariler.SatisOzelFiyati,
                 cariler.Aciklama,
-                Alacak = cariler.AlisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Giriş").Sum(c => c.Tutar) ?? 0),
+                Alacak =
+                    cariler.AlisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Giriş").Sum(c => c.Tutar) ?? 0),
                 Borc = cariler.SatisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Çıkış").Sum(c => c.Tutar) ?? 0),
                 Bakiye = cariler.AlisToplam +
                          (kasahareket.Where(c => c.Hareket == "Kasa Giriş").Sum(c => c.Tutar) ?? 0) -
@@ -83,6 +85,65 @@ namespace NetSatis.Entities.DataAccess
                           (kasahareket.Where(c => c.Hareket == "Kasa Çıkış").Sum(c => c.Tutar) ?? 0))
             }).ToList();
             return result;
+        }
+
+        public object CariFisAyrinti(NetSatisContext context, string cariKodu)
+        {
+            var result = context.Fisler.Where(c => c.CariKodu == cariKodu).GroupJoin(
+                context.KasaHareketler.Where(c => c.CariKodu == cariKodu), c => c.CariKodu, c => c.CariKodu,
+                (fisler, kasahareket) => new
+                {
+                    fisler.Id,
+                    fisler.FisKodu,
+                    fisler.FisTuru,
+                    fisler.PlasiyerKodu,
+                    fisler.PlasiyerAdi,
+                    fisler.BelgeNo,
+                    fisler.Tarih,
+                    fisler.IskontoOrani,
+                    fisler.IskontoTutar,
+                    fisler.Aciklama,
+                    fisler.ToplamTutar,
+                    Odenen = context.KasaHareketler.Sum(c => c.Tutar) ?? 0,
+                    KalanOdeme = fisler.ToplamTutar - context.KasaHareketler.Sum(c => c.Tutar) ?? 0
+                }).ToList();
+            return result;}
+
+        public object CariFisGenelToplam(NetSatisContext context, string cariKodu)
+        {
+            var result = (from c in context.Fisler.Where(c => c.CariKodu == cariKodu)
+                group c by new {c.FisTuru, c.ToplamTutar}
+                into grp
+                select new
+                {
+                    Bilgi = grp.Key.FisTuru,
+                    KayitSayisi = grp.Count(),
+                    ToplamTutar = grp.Sum(c => c.ToplamTutar)
+                }).ToList();
+            return result;
+        }
+
+        public object CariGenelToplam(NetSatisContext context, string cariKodu)
+        {
+            var genelToplamlar = new List<GenelToplam>
+            {
+                new GenelToplam
+                {
+                    Bilgi = "Alacak",
+                    Tutar = 0
+                },
+                new GenelToplam
+                {
+                    Bilgi = "Borç",
+                    Tutar = 0
+                },
+                new GenelToplam
+                {
+                    Bilgi = "Bakiye",
+                    Tutar = 0
+                }
+            };
+            return genelToplamlar;
         }
     }
 }

@@ -86,7 +86,8 @@ namespace NetSatis.BackOffice.Stok_Menü
             {
                 stokDal.Save(context);
                 Close();
-            }}
+            }
+        }
 
         private void btnKapat_Click(object sender, EventArgs e)
         {

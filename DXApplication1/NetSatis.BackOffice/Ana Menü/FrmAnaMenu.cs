@@ -1,10 +1,10 @@
 ﻿using System;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Stok_Menü;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.DataAccess;
-using NetSatis.Entities.Tables;
 
 namespace NetSatis.BackOffice
 {
@@ -24,7 +24,7 @@ namespace NetSatis.BackOffice
         {
             var context = new NetSatisContext();
             var cariDal = new CariDAL();
-            var entity = new Cari
+            var entity = new Entities.Tables.Cari
             {
                 CariKodu = "123456789",
                 CariAdi = "Can Özaytekin",
@@ -38,6 +38,13 @@ namespace NetSatis.BackOffice
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             var form = new FrmStok();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void btnCari_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var form = new FrmCari();
             form.MdiParent = this;
             form.Show();
         }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using NetSatis.Entities.Context;
@@ -13,10 +6,11 @@ using NetSatis.Entities.DataAccess;
 
 namespace NetSatis.BackOffice.Cari
 {
-    public partial class FrmCari : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCari : XtraForm
     {
-        NetSatisContext context = new NetSatisContext();
-        CariDAL cariDal = new CariDAL();
+        private readonly CariDAL cariDal = new CariDAL();
+        private readonly NetSatisContext context = new NetSatisContext();
+        private string secilen;
 
         public FrmCari()
         {
@@ -74,6 +68,30 @@ namespace NetSatis.BackOffice.Cari
         private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            var form = new FrmCariIslem(new Entities.Tables.Cari());
+            form.ShowDialog();
+        }
+
+        private void btnDüzenle_Click(object sender, EventArgs e)
+        {
+            secilen = gridView1.GetFocusedRowCellValue(colCariKodu).ToString();
+            var form = new FrmCariIslem(cariDal.GetByFilter(context, c => c.CariKodu == secilen));
+            form.ShowDialog();
+        }
+
+        private void btnKopyala_Click(object sender, EventArgs e)
+        {
+            secilen = gridView1.GetFocusedRowCellValue(colCariKodu).ToString();
+            var cariEntity = new Entities.Tables.Cari();
+            cariEntity = cariDal.GetByFilter(context, c => c.CariKodu == secilen);
+            cariEntity.Id = -1;
+            cariEntity.CariKodu = null;
+            var form = new FrmCariIslem(cariEntity);
+            form.ShowDialog();
         }
     }
 }
