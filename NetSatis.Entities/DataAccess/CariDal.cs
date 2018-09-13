@@ -107,7 +107,8 @@ namespace NetSatis.Entities.DataAccess
                     Odenen = context.KasaHareketler.Sum(c => c.Tutar) ?? 0,
                     KalanOdeme = fisler.ToplamTutar - context.KasaHareketler.Sum(c => c.Tutar) ?? 0
                 }).ToList();
-            return result;}
+            return result;
+        }
 
         public object CariFisGenelToplam(NetSatisContext context, string cariKodu)
         {
